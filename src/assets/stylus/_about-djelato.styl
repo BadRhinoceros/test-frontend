@@ -1,0 +1,173 @@
+.djelato
+  &__title-block
+    display: inline-flex;
+    width: 100%
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  &__title
+    font-family: $appetite
+    font-size: 66px
+    color: $orange
+    font-weight: normal;
+    text-align: center;
+    margin-top: 40px
+    margin-bottom 80px
+    @media xs
+      font-size: 33px
+  &__main-title
+    margin-bottom: 40px
+  &__title-links
+    display: inline-flex
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px
+  &__link
+    font-family $geom
+    text-decoration: underline
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 33px;
+  &__info-block
+    display: block;
+    position: relative;
+    height: 594px
+    width: 100%
+    margin-bottom 22px
+    @media xs
+      height: 462px
+  &__info-background
+    height: inherit;
+    width: 100%
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  &__info-desc-block
+    display: flex;
+    position: absolute;
+    height: inherit;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+    width: 400px
+    left: 0
+    top 0
+    padding-left: 40px
+    padding-right: 40px
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding-top: 70px
+    @media xs
+      width: 100%
+      height: auto;
+      padding-bottom: 10px
+      padding-left: 10px
+      padding-right: 10px
+  &__info-title
+    margin-bottom 27px
+  &__info-txt
+    margin-bottom 55px
+  &__subdesc-block
+    display: inline-block;
+    width: 100%
+  &__subdesc-items
+    display: inline-block;
+    width: 100%
+    margin-bottom: 100px
+    @media md
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    @media sm
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  &__subdesc-item
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px
+    margin-right: 85px
+    &:nth-child(3n)
+      margin-right: 0
+    @media lg
+      width: 300px
+      margin-right: 10px
+    @media md
+      margin-right: 0
+    @media sm
+      margin-right: 0
+    @media xs
+      margin-right: 0
+      width: 100%
+  &__subdesc-img
+    display: block;
+    height: 128px
+    width: 128px
+    background-image: url('../images/icons/new-ruka.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+  &__subdesc-title
+    display: inline-block
+    width: 100%
+    font-family: $geom
+    text-align: center;
+    color: black 
+    font-weight bold
+    margin-bottom: 27px
+  &__subdesc-desc
+    font-family $roboto
+    font-weight normal
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey
+  &__sorts-wrap
+    display: block
+    width: 100%
+  &__sorts-slide
+    width: 100%
+  &__sorts-title
+    text-align: center
+  &__sorts-slider
+    display inline-flex
+    position: relative
+    width: 100%
+    // border 1px solid black
+  &__sorts-slide
+    display: inline-flex
+    flex-direction: column
+    align-items: center
+  &__sorts-item
+    display inline-block
+    width: 400px
+    // border 1px solid green
+  &__sort-title
+    text-align: center
+    padding-left: 30px
+    padding-right: 30px
+    margin-bottom: 30px
+  &__sort-desc
+    text-align: center
+    margin-bottom: 25px
+  &__sorts-prev
+    display inline-block
+    position absolute
+    left 33%
+    height 21px
+    width 13.5px
+    cursor: pointer
+    background-image: url('../images/icons/left-slider-arrow.png')
+    z-index: 10
+  &__sorts-next
+    display inline-block
+    position absolute
+    right 33%
+    height 21px
+    width 13.5px
+    cursor: pointer
+    background-image: url('../images/icons/right-slider-arrow.png')
+    z-index: 10

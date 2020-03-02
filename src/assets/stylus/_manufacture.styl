@@ -1,0 +1,261 @@
+.manufacture
+  &__main-title
+    display flex
+    flex-direction row
+    align-items center
+    justify-content center
+    width: 100%
+    padding 40px 0
+    @media xs-md
+      padding 20px 0
+
+  &__main-title--icons
+    width: 64px
+    height: 64px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    margin-right: 20px
+    @media xs-md
+      display none
+
+  &__main-title--text
+    font-family: $appetite;
+    font-size: 66px;
+    color $orange
+    max-width 450px
+    line-height 1
+    @media xs
+      font-size: 38px
+      text-align center
+    @media sm
+      font-size: 46px
+      text-align center
+    @media md
+      font-size: 52px
+      text-align center
+
+  &__info
+    display flex
+    flex-direction row
+    padding 35px 0
+    @media xs-md
+      flex-direction column
+      padding 20px 0
+
+  &__info--items
+    width: 33.333%
+    padding 0 20px
+    @media xs-md
+      width: 100%
+
+  &__info--icons
+    width: 100px
+    height: 100px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    margin 0 auto 20px
+
+  &__info--title
+    font-family: $geom
+    font-size: 18px
+    color #000
+    text-align: center
+    padding-bottom: 20px
+
+  &__info--text
+    font-family: $roboto
+    font-size: 16px
+    color #AAAAAA
+    text-align: center
+
+  &__product
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    padding 60px 0
+    @media xs-md
+      padding 20px 0
+
+  &__product--wrapper
+    width: 80%
+    display flex
+    flex-direction row
+    align-items center
+    padding-bottom: 60px
+    @media xs-md
+      width: 100%
+      flex-direction column
+      padding-bottom: 20px
+
+  &__product--img-wrapper
+    width: 30%
+    @media xs-md
+      width: 100%
+
+  &__product--img
+    border 6px solid $orange
+    border-radius 50%
+    width: 220px
+    height: 220px
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    @media xs-md
+      margin 0 auto 20px
+
+  &__product--text
+    width: 70%
+    padding-left: 40px
+    @media xs-md
+      width: 100%
+      padding-left: 0
+
+  &__product--text-title
+    color #000
+    font-family: $geom
+    font-weight: bold;
+    font-size: 18px
+    padding-bottom: 20px
+    @media xs-md
+      text-align: center;
+
+  &__product--text-desc,
+  &__product--text-desc > span,
+  &__product--text-desc > p,
+  &__product--text-desc > div
+    font-family: $roboto
+    font-size: 16px
+    color #AAAAAA
+    line-height 1.5
+    @media xs-md
+      text-align: center;
+
+  &__product--text-desc > a
+    font-weight: bold;
+
+  &__product--list
+    display flex
+    flex-direction column
+    align-items center
+
+  &__product--list--title
+    font-family: $appetite
+    font-size: 33px
+    color $orange
+    text-align: center
+    padding-bottom: 20px
+
+  &__product--ul
+    li
+      list-style-type disc
+      font-family: $roboto
+      font-size: 16px
+      color #0c0c0c
+      padding-bottom: 25px
+
+  &__items
+    display flex
+    flex-direction row
+    padding-bottom: 100px
+  &__img
+    width: 39%
+    height: 670px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat;
+  &__content
+    width 41%
+    padding-left: 70px
+    display flex
+    flex-direction column
+    align-items flex-start
+  &__title
+    font-family: Appetite;
+    font-size: 33px;
+    color: $orange
+    padding-bottom: 50px
+    max-width 80%
+  &__txt
+    max-width 80%
+    font-family: Roboto;
+    font-size: 16px;
+    color: #AAAAAA;
+    padding-bottom: 50px
+.how-use
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  margin-bottom: 100px
+  &__title
+    font-family: $appetite
+    font-size: 32px
+    color $orange
+  &__items
+    display flex
+    flex-direction row
+    align-items center
+    width 80%
+    padding-bottom: 25px
+  &__icons
+    background-size: contain;
+    width: 110px
+    height: 92px
+    background-position: center
+    background-repeat: no-repeat
+    margin-right: 30px
+  &__text
+    font-family: $roboto
+    font-size: 16px
+    color #AAAAAA
+    a
+      color $orange
+      font-weight: bold;
+.have-question
+  display flex
+  flex-direction row
+  align-items center
+  justify-content center
+  width 80%
+  margin 0 auto
+  &__img--wrapper
+    width 30%
+  &__img
+    border 6px solid $orange
+    border-radius 50%
+    width: 220px
+    height: 220px
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    @media xs-md
+      margin 0 auto 20px
+  &__items
+    width: 70%
+    display flex
+    flex-direction column
+    align-items flex-start
+  &__title
+    padding-bottom: 40px
+    font-family: $appetite
+    font-size: 32px
+    color $orange
+  &__name
+    font-family: $roboto
+    font-size: 22px
+    color $orange
+  &__text
+    font-family: $roboto
+    color #AAAAAA
+    font-size: 16px
+    padding-bottom: 15px
+  &__btn
+    margin-top: 30px
+
+
+

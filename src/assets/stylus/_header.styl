@@ -1,0 +1,312 @@
+.header
+  &__desktop
+    display flex
+    @media xs-all
+      display none
+    @media md
+      display none
+
+  &__wrapper
+    flex-direction row
+    align-items stretch
+    background-color: white
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &__wrapper-main
+    background-color #5F0609
+    box-shadow: none
+    .header__links--item:hover
+      background-color: transparent
+    .header__main-link-simple
+      color: $orange !important
+    .header__links--item
+      color white
+    .header__contacts-desctop
+      color white
+    .header__contacts--number
+      color $orange
+  &__logo
+    background-color: $orange
+    border-bottom-right-radius 14px
+    border-top-right-radius 14px
+    width: 13%
+    display flex
+    justify-content center
+    align-items center
+    @media lg
+      width: 15%
+
+  &__logo--img
+    background-image: url('../images/img/logo.png')
+    width: 122px
+    height: 116px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+  &__links
+    width: 60%
+    display flex
+    flex-direction column
+    justify-content center
+    padding-left 20px
+    @media lg
+      padding-left: 30px
+
+  &__links--wrapper
+    display flex
+    flex-direction row
+    align-items center
+    flex-wrap wrap
+  &__main-link
+    position relative
+    &.active
+      color $orange
+    &:hover
+      color $orange
+  &__order-link
+    &:after
+      content: url('../images/icons/order-arrow.png')
+      display: inline-block
+      padding-left: 15px
+    &:hover:after
+      content: url('../images/icons/order-arrow-active.png')
+
+  &__main-link-simple
+    &.header__order-link:after
+      content: url('../images/icons/order-arrow-active.png') !important
+
+  &__links--item
+    display inline-block
+    position relative
+    font-family: $geom
+    font-weight: 500
+    font-size: 22px
+    color: #000000
+    padding 10px 33px 10px 33px
+    @media lg
+      font-size: 18px
+    &:hover
+      background-color white
+      .header__main-link
+        z-index 12
+      .header__subtitle-block
+        display: inline-flex
+
+  &__contacts
+    width: 27%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    &:hover
+      background-color: white
+      border-bottom: 1px solid #E7E7E7;
+      .header__contacts-desctop
+        display: none
+      .header__contacts-mobile
+        display inline-block
+      .header__contacts-hide
+        display: inline-flex
+    @media lg
+      width: 25%
+  &__contacts-block
+    width: 100%
+    text-align: center
+  &__contacts-hide
+    width: 100%
+    text-align: center
+    flex-direction: column
+    align-items: center
+  &__schedule
+    display inline-flex
+    align-items: center
+  &__schedule-img
+    display inline-block
+    height 29px
+    width: 28px
+    background-image url('../images/icons/clock-icon.png')
+    background-position center
+    background-size: cover
+    background-repeat no-repeat
+  &__contacts-desctop
+    display inline-block
+    font-family: $roboto
+    font-size: 14px
+    color: #000000
+    @media lg
+      font-size: 12px
+  &__contacts-mobile
+    display: none
+  &__contacts--number
+    font-family: $geom
+    font-weight: bold
+    font-size: 22px
+    color: #000000
+    @media lg
+      font-size: 18px
+  &__contacts-hide
+    display: none
+    position: absolute
+    width: inherit
+    top 116px
+    z-index: 20
+    background-color: white
+    border-radius: 0 0 11px 11px
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &__subnumber-block
+    padding-top: 15px
+    padding-bottom: 13px
+    min-height: 79px
+    width: 100%
+    &:last-child
+      border-top 1px solid #E7E7E7
+  &__subnumber-title
+    font-family $roboto
+  &__schedule-txt
+    display inline-block
+    text-align: left
+    // width: 110px
+    margin-left: 10px
+  &__schedule-time
+    font-family $roboto
+    font-weight: normal;
+    font-size: 18px;
+  &__schedule-desc
+    font-family $roboto
+    font-weight: normal;
+    font-size: 14px;
+    color $grey
+  &__clock-block
+    padding-top 28px
+    padding-bottom 28px
+
+
+
+
+
+  &__mobile
+    display none
+    position: fixed
+    background-color: $orange
+    height: 65px
+    width 100%
+    z-index 9999
+    @media xs-all
+      display block
+    @media md
+      display block
+  &__burger-btn
+    position: absolute
+    left 0
+    height 20px
+    width: 20px
+    background-color: transparent
+    border: none
+    margin-top: 23px
+    background-image: url('../images/icons/burger-icon.png')
+    background-position: center;
+    background-repeat: no-repeat
+    background-size: cover
+  &__mobile-wrap
+    display: none
+    position: absolute
+    top: 0px
+    width: 100%
+    height 100vh
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index 10
+    @media md
+      display: block
+    @media sm
+      display: block
+    @media xs
+      display: block
+  &__mobile-fixed-wrap
+    display: inline-flex;
+    position relative
+    justify-content: center;
+    height: 65px;
+    width: 100%;
+    .header__logo--img
+      display: inline-block;
+      width: 100px;
+      height: 65px;
+  &__mobile-block
+    display none
+    position: absolute
+    width: 250px
+    height 100vh
+    background-color: white
+    z-index 11
+    top: 0
+    left -100vw
+    transition: all .4s linear;
+    &.active
+      left 0vw
+    @media md
+      display: block
+      left -127vw
+    @media sm
+      display: block
+      left -127vw
+    @media xs
+      display: block
+      left -127vw
+  &__mobile-menu-wrap
+    display flex
+    position absolute
+    flex-direction: column
+    align-items: center
+    right 15px
+    width: 225px
+    padding-top: 43px
+  &__menu-title
+    font-weight bold
+    margin-top 10px
+    margin-bottom: 15px
+    text-transform uppercase
+  &__menu-links
+    display flex
+    flex-direction: column
+    width: 100%
+    font-family: $geom
+    font-weight: 500;
+    color: #1B1B1B;
+    padding-left: 37px
+    a
+      margin-bottom: 15px
+  &__mobile-menu-btn
+    margin-bottom: 30px
+    width: 100%
+    text-align: center
+    padding: 15px 15px !important
+  &__whatsapp-icon
+    display inline-block
+    height: 79px;
+    width: 90px;
+    background-image: url('../images/icons/whatsapp-icon.png')
+  &__subtitle-block
+    display: none
+    position: absolute
+    flex-direction: column
+    z-index 10
+    left 0
+    width: 159px
+    top: 47px
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    padding-top: 10px
+    padding-bottom: 15px
+    a
+      color: black !important
+      text-align: center
+      font-size: 14px
+      transition: all 0s
+      padding-top: 5px
+      padding-bottom: 5px
+      font-weight: 500
+      &:hover
+        color $orange !important

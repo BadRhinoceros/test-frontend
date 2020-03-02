@@ -1,0 +1,168 @@
+.main-info-block
+  background-color: #fff
+  padding 45px 0
+
+  &__wrapper
+    min-height 600px
+    display flex
+    flex-direction row
+    align-items stretch
+    @media xs-md
+      flex-direction column
+      align-items flex-start
+      justify-content center
+      min-height auto
+
+  &__items
+    width 33.3333%
+    min-height 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    display flex
+    justify-content center
+    align-items center
+    flex-direction column
+    padding 120px 40px
+    position relative
+    &:hover
+      &:before
+        content ''
+        background: rgba(250, 187, 0, 0.9)
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        position absolute
+        top 0
+        left 0
+        right: 0
+        bottom: 0
+        z-index 1
+        @media xs-md
+          content unset
+      .main-info-block__text
+        display: block
+        @media xs-md
+          display none
+    @media xs-md
+      width: 100%
+      background unset !important
+      flex-direction row
+      padding 0
+      margin-bottom: 20px
+
+    &:nth-child(1)
+      .main-info-block__btn > .main-info-block__btn--icons
+        background-image: url('../images/icons/moroz.png')
+        @media xs-md
+          background-image: url('../images/icons/gorshok-xs.png')
+
+      .main-info-block__btn--icons.arrow
+        display none
+        @media xs-md
+          display block
+
+      .main-info-block__btn
+        background-color: #fabb00
+
+        &:hover,
+        &:focus
+          background-color: #fabb00
+          color #fff
+          @media xs-md
+            background-color: #fabb00b5
+            color #fff
+
+        .main-info-block__btn--icons
+          background-image: url('../images/icons/tort.png')
+
+    &:nth-child(2)
+      .main-info-block__btn--icons
+        background-image: url('../images/icons/tort.png')
+
+    &:nth-child(3)
+      .main-info-block__btn > .main-info-block__btn--icons
+        background-image: url('../images/icons/telega.png')
+
+      .main-info-block__btn--icons.arrow
+        display none
+        @media xs-md
+          display block
+
+
+  &__btn
+    padding: 18px 0
+    font-family: Geometria
+    font-weight: 700
+    font-size: 18px
+    color: #fff
+    background-color: $orange
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25)
+    border-radius: 37px
+    width 100%
+    max-width 280px
+    text-align: left
+    position absolute
+    top 26px
+    left 50%
+    transform translateX(-50%)
+    z-index 2
+    display flex
+    align-items center
+
+    &:hover,
+    &:focus
+      background-color: #fabb00
+      color #fff
+    @media xs-md
+      position relative
+      transform unset
+      top auto
+      left auto
+      padding 18px 0
+
+    span
+      width: 40%
+
+  &__btn--icons
+    width 30%
+    height 45px
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+
+    &.arrow
+      background-image: url('../images/icons/thin-arrow-left.png') !important
+      height: 29px
+
+  &__text
+    display: none
+    z-index 2
+    text-align: center
+    @media xs-md
+      display none
+
+    p, span, div, a
+      font-family: $roboto
+      font-weight: 900
+      font-size: 16px
+      color: #FFFFFF
+
+    a
+      text-transform: uppercase
+      position relative
+
+      &:after
+        content ''
+        border-bottom 1px solid #fff
+        width: 0
+        left: 0
+        position absolute
+        bottom 0
+        transition all .3s ease-out
+
+      &:hover,
+      &:focus
+        color #ffffff
+
+        &:after
+          width: 100%
+          right: 0

@@ -1,0 +1,30 @@
+font_generate(font_folder, font_name, font_family, font_weight = 'normal', font_style = 'normal'){
+	
+	prefix = "../fonts/" + font_folder + '/' + font_name
+
+	@font-face {
+		font-family font_family
+		src url(prefix + '.woff') format('woff'),
+			url(prefix + '.woff2') format('woff2')
+		font-weight font_weight
+		font-style font_style
+	}
+}
+font_generate('Geometria', 'Geometria-Thin', 'Geometria', 100)
+font_generate('Geometria', 'Geometria-ExtraLight', 'Geometria', 200)
+font_generate('Geometria', 'Geometria-Light', 'Geometria', 300)
+font_generate('Geometria', 'Geometria', 'Geometria', 400)
+font_generate('Geometria', 'Geometria-Medium', 'Geometria', 500)
+font_generate('Geometria', 'Geometria-Bold', 'Geometria', 700)
+font_generate('Geometria', 'Geometria-ExtraBold', 'Geometria', 800)
+font_generate('Geometria', 'Geometria-Heavy', 'Geometria', 900)
+
+font_generate('Appetite', 'Appetite-Rounded', 'Appetite', 400)
+
+font_generate('Roboto', 'Roboto-Thin', 'Roboto', 100)
+font_generate('Roboto', 'Roboto-Light', 'Roboto', 300)
+font_generate('Roboto', 'Roboto-Regular', 'Roboto', 400)
+font_generate('Roboto', 'Roboto-Medium', 'Roboto', 500)
+font_generate('Roboto', 'Roboto-Bold', 'Roboto', 700)
+font_generate('Roboto', 'Roboto-Black', 'Roboto', 900)
+

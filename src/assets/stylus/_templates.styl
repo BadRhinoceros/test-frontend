@@ -1,0 +1,82 @@
+/* templates */
+
+.btn
+  padding 0
+  border none
+
+ul.ul
+  padding 0
+  margin 0
+
+input.input
+  padding 0
+  border none
+
+.slider__prev--wh,
+.slider__next--wh,
+.slider__prev--orange,
+.slider__next--orange
+  width: 66px
+  height: 66px
+  background-size: contain
+  position absolute
+  z-index 2
+  cursor: pointer
+
+
+.slider__prev--wh
+  background-image: url('../images/icons/arrow-left--wh.png')
+.slider__prev--orange
+  background-image: url('../images/icons/arrow-left--orange.png')
+
+
+.slider__next--wh
+  background-image: url('../images/icons/arrow-right--wh.png')
+.slider__next--orange
+  background-image: url('../images/icons/arrow-right--orange.png')
+
+
+.container
+  width 100%
+  padding-right 15px
+  padding-left 15px
+  margin-right auto
+  margin-left auto
+  @media sm
+    max-width 540px
+  @media md
+    max-width 720px
+  @media lg
+    max-width 960px
+  @media xl
+    max-width 1170px
+
+.btn--orange
+  display inline-block // Этого небыло
+  font-family: Geometria;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #FABB00;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 37px;
+  padding 25px 60px
+  cursor: pointer
+  &:hover,
+  &:focus
+    background-color: #fabb00b5
+  @media xs-md
+    padding 25px 40px
+
+.sub-title
+  font-size: 33px
+  font-family: $appetite
+  font-weight normal
+  color: $orange
+.txt-align-center
+  text-align: center
+.txt-align-left
+  text-align left !important
+
+.no-scroll
+  overflow hidden

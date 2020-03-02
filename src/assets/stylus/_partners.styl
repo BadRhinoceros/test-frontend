@@ -1,0 +1,65 @@
+.partners
+    &__wrap
+        width: 100%
+    &__block
+        display inline-flex
+        width: 100%
+        flex-wrap: wrap
+        @media sm
+            flex-direction: column
+            align-items: center
+        @media xs
+            flex-direction: column
+            align-items: center
+    &__item
+        display inline-block
+        width 300px
+        margin-right: 120px
+        margin-bottom: 55px
+        &:nth-child(3n)
+            margin-right: 0
+        @media lg
+            width: 290px
+            margin 0
+            margin-right 25px
+            margin-bottom 25px
+            &:nth-child(3n)
+                margin-right: 0
+        @media md
+            margin-right 0
+            &:nth-child(2n)
+                margin-left 90px
+        @media sm
+            margin 0
+            margin-bottom 35px
+        @media xs
+            width: 290px
+            margin 0
+            margin-bottom 35px
+    &__img
+        height 181px
+        width inherit
+        background-color: red
+        margin-bottom: 26px
+        background-position: center
+        background-repeat no-repeat
+        background-size: cover
+        @media xs
+            width: 100%
+    &__txt
+        text-align: center
+    &__title
+        font-family $geom
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom 30px
+    &__desc
+        font-family $roboto
+        font-size: 16px;
+        line-height: 22px;
+        color $grey
+    &__link
+        font-family $roboto
+        color $orange !important
+        &:hover
+            text-decoration: underline

@@ -1,0 +1,120 @@
+.main-slider
+  position relative
+  height 590px
+  @media xs-md
+    height: auto
+
+  &__items
+    position relative
+    height 100%
+    width: inherit
+    // width: 100%
+    flex-shrink: 0
+
+  &__bg
+    height 590px
+    width: 100%
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    @media xs-all
+      height: 285px
+    @media md
+      height: 370px
+
+  &__item
+    position absolute
+    padding 40px 0
+    top 0
+    bottom 0
+    left 0
+    right 0
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    @media xs-md
+      position static
+      padding 10px 0
+
+  &__item--title
+    max-width 430px
+    display flex
+    align-items center
+    flex-direction row
+    justify-content center
+    text-shadow: 1px 1px 1px #000000 75
+    @media xs-md
+      flex-wrap wrap
+      text-shadow unset
+      max-width 100%
+
+  &__item--number
+    font-family: $appetite
+    font-size: 144px
+    padding-right: 10px
+    line-height 1
+    color #ffffff
+    @media xs-md
+      color $orange
+      font-size: 72px
+
+  &__item--txt
+    font-family: $appetite
+    font-size: 44px
+    padding-top: 20px
+    color #ffffff
+    @media xs-md
+      color $orange
+      font-size: 24px
+      padding-top: 10px
+
+  &__item--desc
+    max-width 430px
+    font-weight: 500
+    font-size: 24px
+    text-align center
+    color #ffffff
+    @media xs-md
+      color #AAAAAA
+      font-size: 16px
+      max-width auto
+
+  &__item--btn
+    font-weight: bold
+    font-size: 18px
+    display block
+    padding 20px 98px
+    border: 2px solid #FFFFFF
+    border-radius: 37px
+    margin-top: 20px
+    color #ffffff
+
+    &:hover,
+    &:focus
+      color white
+      border-color $orange
+      background-color: $orange
+    @media xs-md
+      color $orange
+      border-color $orange 
+      padding 14px 58px
+
+  &__prev,
+  &__next
+    top 50%
+    transform translateY(-50%)
+    @media xs-md
+      top 190px
+      transform unset
+
+  &__prev
+    left 60px
+    @media xs-md
+      left: 15px
+
+  &__next
+    right: 60px
+    @media xs-md
+      right 15px
+
